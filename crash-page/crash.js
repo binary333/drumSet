@@ -3,6 +3,12 @@ $(".drumClick").on("click",function(){
     makeSound(clickedSound);
     animationClick(clickedSound)
 });
+
+$(".drumClick").on("keypress", function(evt){
+    makeSound(evt.key);
+    animationClick(evt.key);
+})
+
 function animationClick(click){
     var activeButton= document.querySelector("."+ click)
     activeButton.classList.add("Clicked");
@@ -10,13 +16,6 @@ function animationClick(click){
         activeButton.classList.remove("Clicked");
     }, 100);
 }
-$(".drumClick").on("keypress", function(evt){
-    makeSound(evt.key);
-    animationClick(evt.key);
-})
-
-
-
 
 
 function makeSound(key){
