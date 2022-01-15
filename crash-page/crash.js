@@ -4,7 +4,7 @@ $(".drumClick").on("click",function(){
     animationClick(clickedSound)
 });
 
-$(".drumClick").on("keypress", function(evt){
+$(document).on("keypress", function(evt){
     makeSound(evt.key);
     animationClick(evt.key);
 })
